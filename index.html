@@ -180,6 +180,7 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
 .arc-content-title { font-family:var(--font-d); font-size:clamp(26px,3.5vw,42px); font-weight:900; color:var(--cream); letter-spacing:-0.02em; line-height:1.05; margin-bottom:16px; }
 .arc-content-title .amber { color:var(--amber); }
 .arc-content-body { font-size:16px; color:rgba(242,239,233,0.55); line-height:1.8; margin-bottom:32px; }
+.arc-feature + .arc-feature { margin-top:96px; padding-top:96px; border-top:1px solid rgba(255,255,255,0.08); }
 .btn-amber { font-family:var(--font-d); font-size:15px; font-weight:700; color:var(--teal); background:var(--amber); padding:15px 32px; border-radius:10px; text-decoration:none; transition:all 0.2s; box-shadow:0 4px 20px rgba(245,168,0,0.3); display:inline-flex; align-items:center; gap:8px; }
 .btn-amber:hover { background:#FFB800; transform:translateY(-2px); box-shadow:0 8px 32px rgba(245,168,0,0.4); }
 .btn-outline { font-family:var(--font-d); font-size:15px; font-weight:600; color:rgba(242,239,233,0.55); text-decoration:none; padding:15px 8px; display:inline-flex; align-items:center; gap:6px; transition:color 0.2s; }
@@ -481,10 +482,10 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
   </div>
 </section>
 
-<!-- ARC FEATURE -->
-<section class="section dark" id="arc">
+<!-- FEATURED PRODUCTS -->
+<section class="section dark" id="products">
   <div class="section-inner">
-    <div class="eyebrow dark">Flagship Product</div>
+    <div class="eyebrow dark">Featured Products</div>
     <div class="arc-feature">
       <div class="arc-content reveal">
         <div class="arc-content-title">Introducing <span class="amber">ARC.</span></div>
@@ -513,6 +514,37 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
           </div>
         </div>
         <a href="https://arc-methodology-five.vercel.app" target="_blank" class="btn-primary" style="font-size:13px;padding:11px 22px;">View Full Methodology →</a>
+      </div>
+    </div>
+
+    <div class="arc-feature">
+      <div class="arc-content reveal">
+        <div class="arc-content-title">Introducing <span class="amber">Procurely.</span></div>
+        <div class="arc-content-body">Procurely is a government procurement intelligence platform built for small businesses pursuing Georgia state and local contracts. It aggregates opportunities across all 159 Georgia counties and uses AI to identify viable bids, evaluate fit, and build competitive proposals — closing the intelligence, decision, and execution gaps that cost small businesses contracts they were qualified to win. A product of Resona IO. Now available as a standalone platform.</div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="https://procurely-web.vercel.app" target="_blank" class="btn-amber">Explore Procurely →</a>
+          <a href="https://calendly.com/operations-resona/resona-discovery" target="_blank" class="btn-outline">Get Started ↗</a>
+        </div>
+      </div>
+      <div class="arc-card reveal rd2">
+        <div class="arc-chip">Find It · Own It · Win It</div>
+        <div class="arc-card-title">A Repeatable Pursuit Pipeline</div>
+        <div class="arc-card-body">One structured pipeline from opportunity match to contract win — not a spreadsheet, not a portal you have to babysit.</div>
+        <div class="arc-phases">
+          <div class="arc-phase-row">
+            <div class="ap-letter">1</div>
+            <div><div class="ap-word">Find It</div><div class="ap-desc">Opportunities auto-matched to your profile — no portal-hopping</div></div>
+          </div>
+          <div class="arc-phase-row">
+            <div class="ap-letter">2</div>
+            <div><div class="ap-word">Own It</div><div class="ap-desc">Qualify, commit, and assemble your pursuit with a documented go/no-go</div></div>
+          </div>
+          <div class="arc-phase-row">
+            <div class="ap-letter">3</div>
+            <div><div class="ap-word">Win It</div><div class="ap-desc">AI-built proposals, submission tracking, and a growing past-performance record</div></div>
+          </div>
+        </div>
+        <a href="https://procurely-web.vercel.app" target="_blank" class="btn-primary" style="font-size:13px;padding:11px 22px;">View Full Pipeline →</a>
       </div>
     </div>
   </div>
