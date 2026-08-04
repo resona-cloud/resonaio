@@ -181,6 +181,27 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
 .arc-content-title .amber { color:var(--amber); }
 .arc-content-body { font-size:16px; color:rgba(242,239,233,0.55); line-height:1.8; margin-bottom:32px; }
 .arc-feature + .arc-feature { margin-top:96px; padding-top:96px; border-top:1px solid rgba(255,255,255,0.08); }
+
+/* PROCURELY — pulled from procurely-web.vercel.app's own palette */
+:root {
+  --proc-navy:#111827; --proc-navy-mid:#1C2B3A; --proc-navy-light:#243447;
+  --proc-blue:#4F8EF7; --proc-blue-hover:#3A7EF6; --proc-gold:#F59E0B; --proc-paper:#F5F2EC;
+}
+.procurely-card { background:var(--proc-navy); border-color:var(--proc-navy-light); }
+.procurely-card::before { background:linear-gradient(to right,var(--proc-blue),var(--proc-gold)); }
+.procurely-card .arc-chip { color:var(--proc-gold); }
+.procurely-card .arc-card-title { color:var(--proc-paper); }
+.procurely-card .arc-card-body { color:rgba(245,242,236,0.6); }
+.procurely-card .arc-phases { border-color:var(--proc-navy-light); }
+.procurely-card .arc-phase-row { border-color:var(--proc-navy-light); }
+.procurely-card .arc-phase-row:hover { background:rgba(79,142,247,0.12); }
+.procurely-card .ap-letter { color:var(--proc-blue); }
+.procurely-card .ap-word { color:var(--proc-paper); }
+.procurely-card .ap-desc { color:rgba(245,242,236,0.45); }
+.btn-procurely { font-family:var(--font-d); font-size:15px; font-weight:700; color:#fff; background:var(--proc-blue); padding:15px 32px; border-radius:10px; text-decoration:none; transition:all 0.2s; box-shadow:0 4px 20px rgba(79,142,247,0.35); display:inline-flex; align-items:center; gap:8px; }
+.btn-procurely:hover { background:var(--proc-blue-hover); transform:translateY(-2px); box-shadow:0 8px 32px rgba(79,142,247,0.45); }
+.btn-procurely-sm { font-family:var(--font-d); font-size:13px; font-weight:700; color:var(--proc-navy); background:var(--proc-gold); padding:11px 22px; border-radius:8px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:all 0.2s; }
+.btn-procurely-sm:hover { background:#ffb020; transform:translateY(-1px); }
 .btn-amber { font-family:var(--font-d); font-size:15px; font-weight:700; color:var(--teal); background:var(--amber); padding:15px 32px; border-radius:10px; text-decoration:none; transition:all 0.2s; box-shadow:0 4px 20px rgba(245,168,0,0.3); display:inline-flex; align-items:center; gap:8px; }
 .btn-amber:hover { background:#FFB800; transform:translateY(-2px); box-shadow:0 8px 32px rgba(245,168,0,0.4); }
 .btn-outline { font-family:var(--font-d); font-size:15px; font-weight:600; color:rgba(242,239,233,0.55); text-decoration:none; padding:15px 8px; display:inline-flex; align-items:center; gap:6px; transition:color 0.2s; }
@@ -358,7 +379,7 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
     <div class="strip-stat reveal">
       <div class="strip-num">01</div>
       <div class="strip-label">Product Architecture</div>
-      <div class="strip-body">We design the underlying structure — the frameworks, data models, and technical foundations — that let ambitious products scale without breaking.</div>
+      <div class="strip-body">We design the underlying structure — the frameworks, decision points, and operational foundations — that let ambitious products scale without breaking.</div>
     </div>
     <div class="strip-stat reveal rd2">
       <div class="strip-num">02</div>
@@ -368,7 +389,7 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
     <div class="strip-stat reveal rd3">
       <div class="strip-num">03</div>
       <div class="strip-label">Digital Products</div>
-      <div class="strip-body">From first sketch to shipped software, we build digital products engineered to solve real problems — not just look good doing it.</div>
+      <div class="strip-body">From first sketch to finished product, we build things engineered to solve real problems — not just look good doing it.</div>
     </div>
   </div>
 </div>
@@ -518,15 +539,7 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
     </div>
 
     <div class="arc-feature">
-      <div class="arc-content reveal">
-        <div class="arc-content-title">Introducing <span class="amber">Procurely.</span></div>
-        <div class="arc-content-body">Procurely is a government procurement intelligence platform built for small businesses pursuing Georgia state and local contracts. It aggregates opportunities across all 159 Georgia counties and uses AI to identify viable bids, evaluate fit, and build competitive proposals — closing the intelligence, decision, and execution gaps that cost small businesses contracts they were qualified to win. A product of Resona IO. Now available as a standalone platform.</div>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;">
-          <a href="https://procurely-web.vercel.app" target="_blank" class="btn-amber">Explore Procurely →</a>
-          <a href="https://calendly.com/operations-resona/resona-discovery" target="_blank" class="btn-outline">Get Started ↗</a>
-        </div>
-      </div>
-      <div class="arc-card reveal rd2">
+      <div class="arc-card procurely-card reveal">
         <div class="arc-chip">Find It · Own It · Win It</div>
         <div class="arc-card-title">A Repeatable Pursuit Pipeline</div>
         <div class="arc-card-body">One structured pipeline from opportunity match to contract win — not a spreadsheet, not a portal you have to babysit.</div>
@@ -544,7 +557,15 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
             <div><div class="ap-word">Win It</div><div class="ap-desc">AI-built proposals, submission tracking, and a growing past-performance record</div></div>
           </div>
         </div>
-        <a href="https://procurely-web.vercel.app" target="_blank" class="btn-primary" style="font-size:13px;padding:11px 22px;">View Full Pipeline →</a>
+        <a href="https://procurely-web.vercel.app" target="_blank" class="btn-procurely-sm">View Full Pipeline →</a>
+      </div>
+      <div class="arc-content reveal rd2">
+        <div class="arc-content-title">Introducing <span class="amber">Procurely.</span></div>
+        <div class="arc-content-body">Procurely is a government procurement intelligence platform built for small businesses pursuing Georgia state and local contracts. It aggregates opportunities across all 159 Georgia counties and uses AI to identify viable bids, evaluate fit, and build competitive proposals — closing the intelligence, decision, and execution gaps that cost small businesses contracts they were qualified to win. A product of Resona IO. Now available as a standalone platform.</div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="https://procurely-web.vercel.app" target="_blank" class="btn-procurely">Explore Procurely →</a>
+          <a href="https://calendly.com/operations-resona/resona-discovery" target="_blank" class="btn-outline">Get Started ↗</a>
+        </div>
       </div>
     </div>
   </div>
@@ -563,7 +584,7 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
       <div class="studio-pillar">
         <div class="pillar-icon">⬡</div>
         <div class="pillar-title">Product Architecture</div>
-        <div class="pillar-body">We design the system before we build it. Stack decisions, operational frameworks, decision cycles — everything that makes a product durable, not just launchable. Architecture is not a phase. It is the foundation every other decision is built on.</div>
+        <div class="pillar-body">We design the system before we build it. Structural decisions, operational frameworks, decision cycles — everything that makes a product durable, not just launchable. Architecture is not a phase. It is the foundation every other decision is built on.</div>
       </div>
       <div class="studio-pillar">
         <div class="pillar-icon">◈</div>
@@ -595,7 +616,7 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
           </div>
           <div class="case-outcome">
             <div class="case-outcome-label">What We Built</div>
-            We started with architecture — mapping the core user flows, the data model, and the decision cycles that would make the platform feel intuitive under pressure. Brand came next: a name, a visual identity, and a voice designed to feel safe and structured without being clinical. Then execution — a phased product roadmap with clear milestones, a go-to-market position that spoke directly to the people who needed it most, and an operating framework the founder could run without us. The result was a functioning platform with a defined market position, a brand its users trusted, and a system its founder could grow.
+            We started with architecture — mapping the core user flows, the operating model, and the decision cycles that would make the platform feel intuitive under pressure. Brand came next: a name, a visual identity, and a voice designed to feel safe and structured without being clinical. Then execution — a phased product roadmap with clear milestones, a go-to-market position that spoke directly to the people who needed it most, and an operating framework the founder could run without us. The result was a functioning platform with a defined market position, a brand its users trusted, and a system its founder could grow.
           </div>
         </div>
       </div>
