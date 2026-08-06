@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Resona IO Contact <onboarding@resend.dev>',
+        from: 'Resona Contact <onboarding@resend.dev>',
         to: process.env.CONTACT_TO_EMAIL || 'operations.resona@gmail.com',
         reply_to: email,
         subject: `New contact form message from ${name}`,

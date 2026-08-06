@@ -1,0 +1,32 @@
+<footer>
+  <div class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-emblem"><img src="/emblem.png" alt="Resona"></div>
+        <div class="footer-brand-name">Resona</div>
+        <div class="footer-tagline">Strategic Product Studio for Operational Clarity</div>
+        <div class="footer-desc">A strategic product studio operating at the intersection of identity, architecture, and execution.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <a class="footer-link" href="/">Home</a>
+        <a class="footer-link" href="/about.html">About &amp; Philosophy</a>
+        <a class="footer-link" href="https://arc.resonabrands.com" target="_blank">ARC Methodology</a>
+      </div>
+      <div>
+        <div class="footer-col-title">On This Page</div>
+        {% for link in pageLinks %}<a class="footer-link" href="{{ link.href }}"{% if link.external %} target="_blank"{% endif %}>{{ link.label }}</a>
+        {% endfor %}
+      </div>
+      <div>
+        <div class="footer-col-title">Get Started</div>
+        <a class="footer-link" href="https://calendly.com/operations-resona/wlecome-to-resona" target="_blank">Get Started</a>
+        <a class="footer-link" href="/contact.html">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Resona. All rights reserved.</span>
+      <span class="footer-copy">Product Studio · Where Precision Meets Results</span>
+    </div>
+  </div>
+</footer>

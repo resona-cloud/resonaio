@@ -1,0 +1,22 @@
+.contact-alt-link { font-family:var(--font-d); font-weight:700; color:var(--teal); text-decoration:none; border-bottom:2px solid var(--amber); transition:color 0.2s; }
+.contact-alt-link:hover { color:var(--teal-2); }
+
+/* CONTACT FORM CARD */
+.contact-card { background:var(--cream-2); border:1px solid var(--border); border-radius:16px; padding:40px; box-shadow:var(--sh-sm); }
+.form-group { margin-bottom:22px; }
+.form-group:last-of-type { margin-bottom:0; }
+.form-label { display:block; font-family:var(--font-d); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; }
+.form-input, .form-textarea { width:100%; font-family:var(--font-b); font-size:15px; color:var(--ink); background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:13px 14px; transition:border-color 0.2s; }
+.form-input:focus, .form-textarea:focus { outline:none; border-color:var(--teal); }
+.form-textarea { min-height:140px; resize:vertical; font-family:var(--font-b); }
+.form-submit { margin-top:24px; width:100%; font-family:var(--font-d); font-size:15px; font-weight:700; color:var(--cream); background:var(--teal); padding:15px 32px; border-radius:10px; border:none; cursor:pointer; transition:all 0.2s; }
+.form-submit:hover { background:var(--teal-2); transform:translateY(-1px); }
+.form-submit:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+.form-status { margin-top:16px; font-size:14px; font-family:var(--font-b); display:none; }
+.form-status.success { color:var(--teal); display:block; font-weight:600; }
+.form-status.error { color:#B3261E; display:block; font-weight:600; }
+
+/* MOBILE */
+@media(max-width:600px){
+  .contact-card{padding:28px;}
+}

@@ -1,0 +1,61 @@
+---
+layout: base.njk
+permalink: "/contact.html"
+title: "Resona — Contact"
+description: "Resona — Get in touch with our team. Send a message or book a discovery session."
+ogTitle: "Resona — Contact"
+ogDescription: "Have a question or a project in mind? Send Resona a message and we'll get back to you within 24 hours."
+navActive: "contact"
+pageCss: "/css/contact.css"
+pageScript: "/js/contact.js"
+pageLinks:
+  - label: "Send a Message"
+    href: "#contact-form"
+  - label: "Book a Session"
+    href: "https://calendly.com/operations-resona/wlecome-to-resona"
+    external: true
+---
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-glow"></div>
+  <div class="ph-inner">
+    <div class="ph-eyebrow">Resona — Contact</div>
+    <h1 class="ph-title">Let's Start <span class="amber">a Conversation.</span></h1>
+    <p class="ph-desc">Have a question, a project in mind, or just want to say hello? Send us a message and a real person will get back to you — usually within 24 hours.</p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="section">
+  <div class="section-inner">
+    <div class="data-grid">
+      <div class="reveal">
+        <div class="data-statement">Every relationship starts with a conversation. We read and answer every message ourselves.</div>
+        <div class="data-body">
+          <p>Whether you're exploring a new product, evaluating ARC, or just have a question about how we work, send us a note using the form and we'll get back to you within 24 hours.</p>
+          <p>Prefer to talk it through live? Skip the form and <a class="contact-alt-link" href="https://calendly.com/operations-resona/wlecome-to-resona" target="_blank">book a 30-minute discovery session</a> directly on our calendar.</p>
+        </div>
+      </div>
+      <div class="reveal rd2">
+        <div class="contact-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" required></textarea>
+            </div>
+            <button class="form-submit" type="submit" id="form-submit">Send Message</button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
