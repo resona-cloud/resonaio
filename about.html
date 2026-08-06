@@ -78,7 +78,8 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
 .data-point:first-child { padding-top:0; }
 .data-point:last-child { border-bottom:none; }
 .data-point:hover { padding-left:8px; }
-.dp-icon { width:40px; height:40px; border-radius:10px; background:var(--teal); display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+.dp-icon { width:40px; height:40px; border-radius:10px; background:var(--teal); display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; color:var(--cream); }
+.dp-icon svg { width:20px; height:20px; }
 .dp-title { font-family:var(--font-d); font-size:15px; font-weight:800; color:var(--teal); margin-bottom:4px; }
 .dp-body { font-size:13px; color:var(--ink-3); line-height:1.65; }
 
@@ -103,7 +104,8 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
 .safety-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:2px; background:var(--amber); transform:scaleX(0); transform-origin:left; transition:transform 0.4s; }
 .safety-card:hover { background:rgba(245,168,0,0.05); }
 .safety-card:hover::before { transform:scaleX(1); }
-.sc-icon { font-size:28px; margin-bottom:16px; display:block; }
+.sc-icon { margin-bottom:16px; display:block; color:var(--amber); }
+.sc-icon svg { width:28px; height:28px; }
 .sc-title { font-family:var(--font-d); font-size:18px; font-weight:800; color:var(--cream); margin-bottom:10px; letter-spacing:-0.01em; }
 .sc-body { font-size:14px; color:rgba(242,239,233,0.45); line-height:1.75; }
 .safety-principles { display:flex; flex-direction:column; gap:0; border:1px solid rgba(255,255,255,0.07); border-radius:12px; overflow:hidden; }
@@ -195,12 +197,12 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
   </a>
   <div class="nav-links">
     <a class="nav-link" href="/">Home</a>
-    <a class="nav-link" href="index.html#studio">Studio</a>
+    <a class="nav-link" href="index.html#studio" style="display:none;">Studio</a>
     <a class="nav-link active" href="about.html">About</a>
     <a class="nav-link" href="https://procurely-web.vercel.app" target="_blank">Procurely</a>
     <a class="nav-link" href="https://arc-methodology-five.vercel.app" target="_blank">ARC</a>
   </div>
-  <a class="nav-cta" href="https://calendly.com/operations-resona/resona-discovery" target="_blank">Get Started</a>
+  <a class="nav-cta" href="https://calendly.com/operations-resona/wlecome-to-resona" target="_blank">Get Started</a>
 </nav>
 
 <!-- PAGE HEADER -->
@@ -229,19 +231,19 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
       </div>
       <div class="data-points reveal rd2">
         <div class="data-point">
-          <div class="dp-icon">🔍</div>
+          <div class="dp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20" y1="20" x2="15.5" y2="15.5"/></svg></div>
           <div><div class="dp-title">Most ideas are unbuilt</div><div class="dp-body">Founders don't fail for lack of vision. Most great ideas sit in notebooks and pitch decks — never translated into an architecture, a brand, or a roadmap that could actually carry them to market.</div></div>
         </div>
         <div class="data-point">
-          <div class="dp-icon">⚡</div>
+          <div class="dp-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
           <div><div class="dp-title">Speed without structure is dangerous</div><div class="dp-body">Shipping fast on a shaky foundation is worse than shipping slow on a solid one. The companies that scale successfully are the ones that build the system before they accelerate.</div></div>
         </div>
         <div class="data-point">
-          <div class="dp-icon">🎯</div>
+          <div class="dp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
           <div><div class="dp-title">Context changes everything</div><div class="dp-body">A pricing model that works in Month 3 collapses by Month 30. A product without business context is just a feature list. Strategy requires understanding where the company actually is.</div></div>
         </div>
         <div class="data-point">
-          <div class="dp-icon">🔄</div>
+          <div class="dp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.9-4M4 13a8 8 0 0 0 14.9 4"/><polyline points="5 3 5 7 9 7"/><polyline points="19 21 19 17 15 17"/></svg></div>
           <div><div class="dp-title">Clarity compounds</div><div class="dp-body">One good architectural decision makes the next one easier. Companies that build methodology into their operating model improve consistently — not just when someone's watching.</div></div>
         </div>
       </div>
@@ -289,22 +291,22 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
 
     <div class="safety-grid reveal rd2">
       <div class="safety-card">
-        <span class="sc-icon">📐</span>
+        <span class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16z"/><line x1="7.5" y1="20" x2="7.5" y2="12"/><line x1="16.5" y1="20" x2="16.5" y2="12"/></svg></span>
         <div class="sc-title">Architecture Before Aesthetics</div>
         <div class="sc-body">Every engagement starts with the system, not the surface. We map the frameworks, decision cycles, and operating foundation before a single asset gets designed.</div>
       </div>
       <div class="safety-card">
-        <span class="sc-icon">🤝</span>
-        <div class="sc-title">You Own Everything We Deliver</div>
-        <div class="sc-body">Full IP, brand assets, and strategic deliverables transfer to you at every milestone. Nothing we create for you stays locked behind us — no proprietary black boxes, no vendor dependency.</div>
+        <span class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg></span>
+        <div class="sc-title">Clear Ownership, Defined Upfront</div>
+        <div class="sc-body">IP and deliverable ownership are spelled out in your agreement — not left ambiguous. Brand assets and strategic deliverables transfer to you as scoped, with no proprietary black boxes hiding what you're paying for.</div>
       </div>
       <div class="safety-card">
-        <span class="sc-icon">🎯</span>
+        <span class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>
         <div class="sc-title">One Named Lead, Start to Finish</div>
         <div class="sc-body">You get a single point of contact who knows your business end to end — not a rotating cast of account managers or a support ticket queue.</div>
       </div>
       <div class="safety-card">
-        <span class="sc-icon">🧭</span>
+        <span class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="15.5 8.5 13.2 13.2 8.5 15.5 10.8 10.8" fill="currentColor" stroke="none"/></svg></span>
         <div class="sc-title">Built to Outlast the Engagement</div>
         <div class="sc-body">Every system we install comes with documentation and a runbook your team can operate without us. When we step back, the system keeps running.</div>
       </div>
@@ -420,7 +422,7 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
     <h2 class="cta-title reveal">Seen Enough?<br><span class="amber">Let us talk.</span></h2>
     <p class="cta-sub reveal">Every engagement starts with a 30-minute discovery session. No commitment, no pressure — just an honest conversation about your business and what clarity could look like for you.</p>
     <div class="cta-actions reveal">
-      <a href="https://calendly.com/operations-resona/resona-discovery" target="_blank" class="btn-amber">Book Discovery Session →</a>
+      <a href="https://calendly.com/operations-resona/wlecome-to-resona" target="_blank" class="btn-amber">Get Started →</a>
       <a href="/" class="btn-outline">Back to home ↗</a>
     </div>
   </div>
@@ -443,16 +445,16 @@ body { background:var(--cream); color:var(--ink); font-family:var(--font-b); fon
         <a class="footer-link" href="https://arc-methodology-five.vercel.app" target="_blank">ARC Methodology</a>
       </div>
       <div>
-        <div class="footer-col-title">Philosophy</div>
-        <a class="footer-link" href="about.html#philosophy">Our Philosophy</a>
-        <a class="footer-link" href="about.html#mission">Our Mission</a>
-        <a class="footer-link" href="about.html#how-we-work">How We Work</a>
-        <a class="footer-link" href="about.html#process">Our Process</a>
+        <div class="footer-col-title">On This Page</div>
+        <a class="footer-link" href="#philosophy">Our Philosophy</a>
+        <a class="footer-link" href="#mission">Our Mission</a>
+        <a class="footer-link" href="#how-we-work">How We Work</a>
+        <a class="footer-link" href="#process">Our Process</a>
       </div>
       <div>
         <div class="footer-col-title">Get Started</div>
-        <a class="footer-link" href="https://calendly.com/operations-resona/resona-discovery" target="_blank">Book Discovery Session</a>
-        <a class="footer-link" href="mailto:operations.resona@gmail.com">operations.resona@gmail.com</a>
+        <a class="footer-link" href="https://calendly.com/operations-resona/wlecome-to-resona" target="_blank">Get Started</a>
+        <a class="footer-link" href="contact.html">Contact Us</a>
       </div>
     </div>
     <div class="footer-bottom">

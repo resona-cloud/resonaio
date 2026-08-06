@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Resona IO — Get in touch with our team. Send a message or book a discovery session.">
+<meta property="og:title" content="Resona IO — Contact">
+<meta property="og:description" content="Have a question or a project in mind? Send Resona IO a message and we'll get back to you within 24 hours.">
+<title>Resona IO — Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Satoshi:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+:root {
+  --cream:#F2EFE9; --cream-2:#E8E4DC; --cream-3:#DDD8CE;
+  --teal:#0D3D36; --teal-2:#155C52; --teal-3:#0A2E29;
+  --amber:#F5A800; --amber-2:#E09700;
+  --ink:#0A0F0E; --ink-2:#2D3B39; --ink-3:#6B7D7A;
+  --border:rgba(13,61,54,0.1);
+  --teal-ghost:rgba(13,61,54,0.06);
+  --amber-ghost:rgba(245,168,0,0.1);
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --sh-sm:0 4px 24px rgba(13,61,54,0.08);
+  --sh-md:0 12px 48px rgba(13,61,54,0.12);
+}
+html { scroll-behavior:smooth; }
+body { background:var(--cream); color:var(--ink); font-family:var(--font-b); font-weight:400; line-height:1.65; font-size:16px; -webkit-font-smoothing:antialiased; }
+
+/* NAV */
+.nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:0 56px; height:64px; background:rgba(242,239,233,0.93); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); transition:box-shadow 0.3s; }
+.nav.scrolled { box-shadow:var(--sh-sm); }
+.nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+.nav-emblem { width:36px; height:36px; border-radius:50%; overflow:hidden; flex-shrink:0; }
+.nav-emblem img { width:100%; height:100%; object-fit:cover; }
+.nav-name { font-family:var(--font-d); font-size:15px; font-weight:800; color:var(--teal); letter-spacing:-0.01em; }
+.nav-links { display:flex; gap:4px; align-items:center; }
+.nav-link { font-family:var(--font-d); font-size:13px; font-weight:500; color:var(--ink-3); text-decoration:none; padding:6px 14px; border-radius:6px; transition:all 0.2s; }
+.nav-link:hover, .nav-link.active { color:var(--teal); background:var(--teal-ghost); }
+.nav-cta { font-family:var(--font-d); font-size:13px; font-weight:700; color:var(--cream); background:var(--teal); padding:9px 22px; border-radius:8px; text-decoration:none; transition:all 0.2s; }
+.nav-cta:hover { background:var(--teal-2); transform:translateY(-1px); }
+
+/* PAGE HEADER */
+.page-header { padding:160px 56px 80px; border-bottom:1px solid var(--border); position:relative; overflow:hidden; background:var(--teal-3); }
+.ph-glow { position:absolute; top:-20%; right:-10%; width:500px; height:500px; background:radial-gradient(circle,rgba(245,168,0,0.08) 0%,transparent 65%); pointer-events:none; }
+.ph-inner { max-width:1100px; margin:0 auto; position:relative; z-index:1; }
+.ph-eyebrow { font-family:var(--font-d); font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:rgba(242,239,233,0.4); margin-bottom:20px; display:flex; align-items:center; gap:12px; }
+.ph-eyebrow::before { content:''; display:block; width:28px; height:2px; background:var(--amber); border-radius:2px; }
+.ph-title { font-family:var(--font-d); font-weight:900; font-size:clamp(44px,6vw,80px); letter-spacing:-0.03em; line-height:0.93; color:var(--cream); margin-bottom:24px; }
+.ph-title .amber { color:var(--amber); }
+.ph-desc { font-size:17px; color:rgba(242,239,233,0.5); line-height:1.8; max-width:540px; }
+
+/* SECTIONS */
+.section { padding:112px 56px; }
+.section-inner { max-width:1100px; margin:0 auto; }
+
+/* CONTACT GRID (mirrors data-grid) */
+.data-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.data-statement { font-family:var(--font-d); font-size:clamp(20px,2.5vw,30px); font-weight:800; letter-spacing:-0.02em; line-height:1.25; color:var(--teal); border-left:4px solid var(--amber); padding-left:28px; margin-bottom:32px; }
+.data-body { font-size:16px; color:var(--ink-2); line-height:1.85; }
+.data-body p { margin-bottom:20px; }
+.data-body p:last-child { margin-bottom:0; }
+.data-body strong { color:var(--teal); font-weight:700; }
+.contact-alt-link { font-family:var(--font-d); font-weight:700; color:var(--teal); text-decoration:none; border-bottom:2px solid var(--amber); transition:color 0.2s; }
+.contact-alt-link:hover { color:var(--teal-2); }
+
+/* CONTACT FORM CARD */
+.contact-card { background:var(--cream-2); border:1px solid var(--border); border-radius:16px; padding:40px; box-shadow:var(--sh-sm); }
+.form-group { margin-bottom:22px; }
+.form-group:last-of-type { margin-bottom:0; }
+.form-label { display:block; font-family:var(--font-d); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; }
+.form-input, .form-textarea { width:100%; font-family:var(--font-b); font-size:15px; color:var(--ink); background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:13px 14px; transition:border-color 0.2s; }
+.form-input:focus, .form-textarea:focus { outline:none; border-color:var(--teal); }
+.form-textarea { min-height:140px; resize:vertical; font-family:var(--font-b); }
+.form-submit { margin-top:24px; width:100%; font-family:var(--font-d); font-size:15px; font-weight:700; color:var(--cream); background:var(--teal); padding:15px 32px; border-radius:10px; border:none; cursor:pointer; transition:all 0.2s; }
+.form-submit:hover { background:var(--teal-2); transform:translateY(-1px); }
+.form-submit:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+.form-status { margin-top:16px; font-size:14px; font-family:var(--font-b); display:none; }
+.form-status.success { color:var(--teal); display:block; font-weight:600; }
+.form-status.error { color:#B3261E; display:block; font-weight:600; }
+
+/* FOOTER */
+.footer { padding:56px 56px 28px; background:var(--ink); }
+.footer-top { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px; }
+.footer-emblem { width:44px; height:44px; border-radius:50%; overflow:hidden; margin-bottom:14px; }
+.footer-emblem img { width:100%; height:100%; object-fit:cover; }
+.footer-brand-name { font-family:var(--font-d); font-size:15px; font-weight:800; color:var(--cream); margin-bottom:4px; }
+.footer-tagline { font-family:var(--font-d); font-size:10px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--amber); margin-bottom:12px; }
+.footer-desc { font-size:13px; color:rgba(242,239,233,0.28); line-height:1.7; max-width:220px; }
+.footer-col-title { font-family:var(--font-d); font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:rgba(242,239,233,0.22); margin-bottom:16px; }
+.footer-link { display:block; font-family:var(--font-d); font-size:13px; font-weight:500; color:rgba(242,239,233,0.48); text-decoration:none; margin-bottom:10px; transition:color 0.2s; }
+.footer-link:hover { color:var(--amber); }
+.footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:24px; border-top:1px solid rgba(255,255,255,0.05); flex-wrap:wrap; gap:12px; }
+.footer-copy { font-family:var(--font-d); font-size:12px; color:rgba(242,239,233,0.18); letter-spacing:0.04em; }
+
+/* REVEAL */
+.reveal { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease,transform 0.6s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.rd1{transition-delay:0.1s} .rd2{transition-delay:0.2s} .rd3{transition-delay:0.3s} .rd4{transition-delay:0.4s}
+
+/* MOBILE */
+@media(max-width:960px){
+  .nav{padding:0 24px;}
+  .nav-links{display:none;}
+  .page-header{padding:120px 24px 64px;}
+  .section{padding:80px 24px;}
+  .data-grid{grid-template-columns:1fr;gap:48px;}
+  .footer{padding:48px 24px 24px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
+}
+@media(max-width:600px){
+  .footer-top{grid-template-columns:1fr;}
+  .contact-card{padding:28px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a class="nav-logo" href="/">
+    <div class="nav-emblem"><img src="emblem.png" alt="Resona IO"></div>
+    <span class="nav-name">Resona IO</span>
+  </a>
+  <div class="nav-links">
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="index.html#studio" style="display:none;">Studio</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="https://procurely-web.vercel.app" target="_blank">Procurely</a>
+    <a class="nav-link" href="https://arc-methodology-five.vercel.app" target="_blank">ARC</a>
+  </div>
+  <a class="nav-cta" href="https://calendly.com/operations-resona/wlecome-to-resona" target="_blank">Get Started</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-glow"></div>
+  <div class="ph-inner">
+    <div class="ph-eyebrow">Resona IO — Contact</div>
+    <h1 class="ph-title">Let's Start <span class="amber">a Conversation.</span></h1>
+    <p class="ph-desc">Have a question, a project in mind, or just want to say hello? Send us a message and a real person will get back to you — usually within 24 hours.</p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="section">
+  <div class="section-inner">
+    <div class="data-grid">
+      <div class="reveal">
+        <div class="data-statement">Every relationship starts with a conversation. We read and answer every message ourselves.</div>
+        <div class="data-body">
+          <p>Whether you're exploring a new product, evaluating ARC, or just have a question about how we work, send us a note using the form and we'll get back to you within 24 hours.</p>
+          <p>Prefer to talk it through live? Skip the form and <a class="contact-alt-link" href="https://calendly.com/operations-resona/wlecome-to-resona" target="_blank">book a 30-minute discovery session</a> directly on our calendar.</p>
+        </div>
+      </div>
+      <div class="reveal rd2">
+        <div class="contact-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" required></textarea>
+            </div>
+            <button class="form-submit" type="submit" id="form-submit">Send Message</button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-emblem"><img src="emblem.png" alt="Resona IO"></div>
+        <div class="footer-brand-name">Resona IO</div>
+        <div class="footer-tagline">Strategic Product Studio for Operational Clarity</div>
+        <div class="footer-desc">A strategic product studio operating at the intersection of identity, architecture, and execution.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <a class="footer-link" href="/">Home</a>
+        <a class="footer-link" href="about.html">About & Philosophy</a>
+        <a class="footer-link" href="https://arc-methodology-five.vercel.app" target="_blank">ARC Methodology</a>
+      </div>
+      <div>
+        <div class="footer-col-title">On This Page</div>
+        <a class="footer-link" href="#contact-form">Send a Message</a>
+        <a class="footer-link" href="https://calendly.com/operations-resona/wlecome-to-resona" target="_blank">Book a Session</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Get Started</div>
+        <a class="footer-link" href="https://calendly.com/operations-resona/wlecome-to-resona" target="_blank">Get Started</a>
+        <a class="footer-link" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Resona IO. All rights reserved.</span>
+      <span class="footer-copy">Product Studio · Where Precision Meets Results</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20));
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold:0.08, rootMargin:'0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+const submitBtn = document.getElementById('form-submit');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  status.className = 'form-status';
+  status.textContent = '';
+
+  const payload = {
+    name: form.name.value.trim(),
+    email: form.email.value.trim(),
+    message: form.message.value.trim(),
+  };
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const result = await res.json();
+
+    if (res.ok) {
+      status.textContent = "Message sent — we'll get back to you within 24 hours.";
+      status.className = 'form-status success';
+      form.reset();
+    } else {
+      status.textContent = result.error || 'Something went wrong. Please try again.';
+      status.className = 'form-status error';
+    }
+  } catch (err) {
+    status.textContent = 'Something went wrong. Please try again.';
+    status.className = 'form-status error';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+  }
+});
+</script>
+
+</body>
+</html>
