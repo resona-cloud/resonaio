@@ -71,6 +71,8 @@
 .cta-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 .btn-outline { font-family:var(--font-d); font-size:15px; font-weight:600; color:rgba(242,239,233,0.5); text-decoration:none; padding:15px 8px; display:inline-flex; align-items:center; gap:6px; transition:color 0.2s; }
 .btn-outline:hover { color:var(--cream); }
+.contact-alt-link { font-family:var(--font-d); font-weight:700; color:var(--teal); text-decoration:none; border-bottom:2px solid var(--amber); transition:color 0.2s; }
+.contact-alt-link:hover { color:var(--teal-2); }
 
 /* MOBILE */
 @media(max-width:960px){
