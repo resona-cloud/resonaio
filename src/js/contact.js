@@ -24,7 +24,7 @@ form.addEventListener('submit', async (e) => {
     const result = await res.json();
 
     if (res.ok) {
-      status.textContent = "Message sent — we'll get back to you within 24 hours.";
+      status.textContent = "Message sent. We'll get back to you within 72 hours.";
       status.className = 'form-status success';
       form.reset();
     } else {
